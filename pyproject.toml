@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-graphcast = {url = "https://github.com/deepmind/graphcast/archive/master.zip"}
+graphcast = { url = "https://github.com/deepmind/graphcast/archive/master.zip" }
 jupyter = "^1.0.0"
 
 
