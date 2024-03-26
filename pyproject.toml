@@ -12,6 +12,7 @@ jupyter = "^1.0.0"
 google-cloud-storage = "^2.16.0"
 herbie-data = "^2024.3.0"
 cartopy = "^0.22.0"
+eccodes = "^1.7.0"
 
 
 [build-system]
