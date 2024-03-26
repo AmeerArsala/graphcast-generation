@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.10"
 graphcast = { url = "https://github.com/deepmind/graphcast/archive/master.zip" }
 jupyter = "^1.0.0"
+google-cloud-storage = "^2.16.0"
+herbie-data = "^2024.3.0"
+cartopy = "^0.22.0"
 
 
 [build-system]
