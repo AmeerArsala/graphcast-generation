@@ -1,4 +1,4 @@
-import numpy as np
+import jax.numpy as jnp
 
 
 def ns_to_hrs(ns: float):
