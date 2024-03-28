@@ -6,6 +6,9 @@ from metpy.calc import (
 )
 from metpy.units import units
 
+import pandas as pd
+from datetime import datetime
+
 
 # Nanoseconds to hours
 def ns_to_hrs(ns: float):
@@ -15,6 +18,29 @@ def ns_to_hrs(ns: float):
 # Hours to nanoseconds
 def hrs_to_ns(hrs: float):
     return hrs * 3.6e12
+
+
+# Example str: '2021-01-01 12:00'
+def format_date_time_for_forecast(date_time: str) -> str:
+    date: str = date_time[:10]
+    time: str = date_time[11:]
+
+    # Format time to nanoseconds
+    time_decimal_index: int = time.rindex(".") + 1
+    REQUIRED_TIME_DIGITS: int = 9  # billionths
+
+    num_decimal_places: int = len(time[time_decimal_index:])
+    if num_decimal_places < REQUIRED_TIME_DIGITS:
+        # Pad it out
+        remaining_places: int = REQUIRED_TIME_DIGITS - num_decimal_places
+        padding: str = "0" * remaining_places
+
+        time = time + padding
+    elif num_decimal_places > REQUIRED_TIME_DIGITS:
+        time = time[time_decimal_index : time_decimal_index + REQUIRED_TIME_DIGITS]
+
+    # add that weird ass 'T' as you join 'em together
+    return "".join([date, "T", time])
 
 
 # decomposes a float value: [0.0, 1.0] into an angle that this function returns the sin and cos of
