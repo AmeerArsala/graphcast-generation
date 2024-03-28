@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "graphcast-generation"
+name = "ultimate-weather-forecast"
 version = "0.1.0"
 description = ""
 authors = ["Ameer Arsala <ameer.arsala03@gmail.com>"]
