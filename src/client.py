@@ -1,5 +1,4 @@
 import requests
-import multiprocessing as mp
 from datetime import datetime
 from herbie import Herbie
 from time import sleep
@@ -31,8 +30,6 @@ def client():
         except:
             print(f"Server refused connection. Terminating...")
             return
-
-        idx = row_json["index"]
 
         date = datetime.strptime(row_json["date"], DATE_FORMAT)
         time = datetime.strptime(row_json["time"], TIME_FORMAT)
