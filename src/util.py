@@ -12,7 +12,7 @@ from datetime import datetime
 
 # Nanoseconds to hours
 def ns_to_hrs(ns: float):
-    return ns / 3.6e120
+    return ns / 3.6e12
 
 
 # Hours to nanoseconds
