@@ -76,7 +76,7 @@ def parse_herbie(H: Herbie):
     humidity = temp_dpt_rh[1].r
     temp = temp_dpt_rh[2].t
     dew_point = temp_dpt_rh[2].dpt
-    start_date, start_time = str(dpt[2].time.data).split("T")
+    start_date, start_time = str(dew_point.time.data).split("T") # easier way to do this
     time = time.split(".")[0]
     wind_gust = gust.gust
 
